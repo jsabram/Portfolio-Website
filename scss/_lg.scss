@@ -1,0 +1,73 @@
+@media (min-width: 992px) {
+	body,
+	input,
+	input::placeholder,
+	textarea,
+	textarea::placeholder,
+	button {
+		font-size: 1.8rem;
+	}
+
+	.header {
+		&__container {
+			margin-bottom: 10em;
+		}
+
+		&__title {
+			font-size: 20rem;
+		}
+
+		&__text {
+			font-size: 3rem;
+		}
+	}
+
+	.section-styled {
+		.section-heading {
+			font-size: 8rem;
+			padding: 0 1em;
+		}
+	}
+
+	.footer {
+		&__text {
+			font-size: 2rem;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.section-styled {
+		.section-heading {
+			font-size: 10rem;
+			padding: 0 2em;
+		}
+	}
+
+	.main {
+		.projects {
+			&__card {
+				&-img {
+					height: 30rem;
+					width: 30rem;
+				}
+
+				&-title {
+					font-size: 3rem;
+				}
+			}
+		}
+
+		.contact {
+			&__info {
+				&-link {
+					font-size: 3rem;
+				}
+
+				img {
+					top: -10em;
+				}
+			}
+		}
+	}
+}

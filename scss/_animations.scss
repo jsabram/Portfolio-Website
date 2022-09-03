@@ -1,0 +1,43 @@
+@keyframes moving-gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes wave {
+	0% {
+		margin-left: 0;
+	}
+
+	30% {
+		margin-left: 60%;
+	}
+
+	60% {
+		margin-left: 0;
+	}
+
+	50% {
+		margin-right: 30%;
+	}
+
+	100% {
+		margin-right: 0;
+	}
+}
+
+@keyframes slideNavItems {
+	from {
+		transform: translateX(-200%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}

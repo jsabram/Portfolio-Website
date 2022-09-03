@@ -1,0 +1,102 @@
+@media (min-width: 768px) {
+	.burger-btn {
+		top: 2em;
+		left: 2em;
+	}
+
+	.nav {
+		&__link {
+			font-size: 3rem;
+		}
+	}
+
+	.wave {
+		animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+	}
+
+	.header {
+		height: 100vh;
+
+		&__title {
+			font-size: 15rem;
+		}
+
+		&__text {
+			font-size: 2.3rem;
+		}
+
+		&__btn {
+			bottom: 5%;
+			height: 60px;
+			width: 60px;
+		}
+	}
+
+	.section-styled {
+		.section-heading {
+			font-size: 6rem;
+		}
+	}
+
+	.main {
+		.about {
+			&__accordion {
+				&-flex--row {
+					justify-content: space-between;
+				}
+			}
+		}
+
+		.projects {
+			&__card {
+				@include flex(flex, center, space-between, row);
+
+				&-img {
+					&--right {
+						order: 1;
+					}
+				}
+
+				&-info {
+					margin-left: 2em;
+
+					&--right {
+						margin: 0 2em 0 0;
+					}
+				}
+
+				&-title {
+					font-size: 2.5rem;
+				}
+
+				&-link {
+					margin-right: 1em;
+				}
+			}
+		}
+
+		.contact {
+			&__cards {
+				@include flex(flex, center, space-between, row);
+			}
+
+			&__info,
+			&__form {
+				width: 50%;
+			}
+
+			&__info {
+				@include flex(flex, center, center, column);
+
+				img {
+					position: absolute;
+					top: -5em;
+					display: block;
+					width: 80%;
+					z-index: -100;
+					opacity: 0.6;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+@media (min-width: 576px) {
+	.header {
+		&__title {
+			font-size: 10rem;
+		}
+
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+
+	.section-styled {
+		.section-heading {
+			font-size: 5rem;
+		}
+	}
+
+	.footer {
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+}

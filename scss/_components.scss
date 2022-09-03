@@ -1,0 +1,131 @@
+.wave {
+	position: absolute;
+	bottom: -3%;
+	width: 150%;
+}
+
+.burger-btn {
+	position: fixed;
+	top: 1em;
+	left: 1em;
+	height: 30px;
+	width: 40px;
+	border: 1px solid transparent;
+	z-index: 50;
+	cursor: pointer;
+
+	.bars {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		width: 100%;
+
+		.bar {
+			width: 60%;
+			height: 2px;
+			background-color: $white-color;
+			transition: width 0.3s;
+
+			&--middle {
+				align-self: center;
+				width: 100%;
+			}
+
+			&--top {
+				align-self: flex-end;
+			}
+		}
+
+		.dark-bar {
+			background-color: #525151;
+		}
+	}
+
+	&:hover {
+		.bars {
+			.bar {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.section-styled {
+	padding: 3em 1em 0;
+
+	.section-heading {
+		padding: 0 0.3em;
+		background: -webkit-linear-gradient(#16a085, #f4d03f);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 100%;
+		font-family: 'Bangers', cursive;
+		font-size: 4rem;
+		letter-spacing: 0.5rem;
+
+		&--right {
+			text-align: right;
+		}
+	}
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1400px;
+	margin: 1em auto 0;
+	padding: 0 1em;
+}
+
+.bold-text {
+	font-weight: bold;
+}
+
+.btn {
+	padding: 0.5em 1em;
+	background-color: $white-color;
+	border: 1px solid transparent;
+	border-radius: 1rem;
+	outline: none;
+	text-transform: uppercase;
+	box-shadow: 0 0 0.8rem $shadow;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+
+	&:hover,
+	&:focus {
+		background-color: $main-color;
+		color: $white-color;
+	}
+}
+
+.link {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	font-weight: bold;
+	color: $black-color;
+	z-index: 0;
+	transition: color.3s;
+
+	&::before {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 0%;
+		background-color: $main-color;
+		content: '';
+		z-index: -1;
+		transition: height 0.3s;
+	}
+
+	&:hover {
+		color: $white-color;
+	}
+
+	&:hover::before {
+		height: 100%;
+	}
+}
