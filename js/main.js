@@ -107,10 +107,16 @@ const calculateDate = () => {
 window.addEventListener('scroll', navBtnObserver);
 navBtn.addEventListener('click', handleNav);
 accordtionBtns.forEach((btn) => btn.addEventListener('click', openAccordion));
-formBtn.addEventListener('click', () => {
+formBtn.addEventListener('click', (e) => {
 	checkForm(formName, 'Name field cannot be empty');
 	checkEmail(formEmail, 'Incorrect email address');
 	checkForm(formMsg, 'Message field cannot be empty');
+
+	inputs.forEach(input => {
+		input.classList.contains('contact__form-input--error') {
+			e.preventDefault()
+		}
+	})
 });
 inputs.forEach((input) =>
 	input.addEventListener('keyup', () => {
